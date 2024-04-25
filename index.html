@@ -27,7 +27,7 @@
                 <div class="text2">Су-25 впервые поднялся в воздух 22 февраля 1975 года. Самолеты этого типа эксплуатируются с 1981 года, принимали участие во множестве военных конфликтов и останутся в строю ВВС России как минимум до 2020 года[2].8 октября 2009 года Министерство обороны Российской Федерации объявило о возобновлении закупок штурмовиков этоготипа для ВВС России</div>
                 <div class="text3">Топливо - 19 200 кг / 9600 кг на один самолет</div>
                 <div class="text3">Оплата с помощью банковской карты</div>
-                <div class="_div_qes">
+                <div class="_div_qes" title="Су-25 впервые поднялся в воздух 22 февраля">
                     <div class="text4">?</div>
                 </div>
             </div>
@@ -38,16 +38,16 @@
             <div class="buttons-inner">
                 <h3>Кнопки</h3>
             <div class="div_btn_twice1">
-                <div class="button1 btn"><a href="#">Подробный отчет</a></div>
-                <div class="button2 btn"><a href="#">Опасный маневр</a></div>
+                <button class="button1 btn">Подробный отчет</button>
+                <button class="button2 btn">Опасный маневр</button>
             </div>
             <div class="div_btn_twice2">
-                <div class="button3 btn"><a href="#">Расчет обработанной площади</a></div>
-                <div class="button4 btn"><a href="#">Отчеты о продвижениях</a></div>
+                <button class="button3 btn">Расчет обработанной площади</button>
+                <button class="button4 btn">Отчеты о продвижениях</button>
             </div>
             <div class="div_btn_twice3">
-                <div class="button5 btn"><a href="#">Легенда маршрута</a></div>
-                <div class="button6 btn"><a href="#">Зарегестрироваться</a></div>
+                <button class="button5 btn">Легенда маршрута</button>
+                <button class="button6 btn">Зарегестрироваться</button>
             </div>
             </div>
         </div>
@@ -57,21 +57,21 @@
             <div class="links-inner">
                 <h3>Ссылки</h3>
                 <div class="links-column">
-                    <a href="#" class="link1">Транспортные средства </a>
-                    <a href="#" class="link2">Транспортные средства </a>
-                    <a href="#" class="link3">Транспортные средства </a>
-                    <a href="#" class="link4">Транспортные средства </a>
-                    <a href="#" class="link5">Транспортные средства </a>
-                    <a href="#" class="link6">Транспортные средства </a>
-                    <a href="#" class="link7">Транспортные средства </a>
-                    <a href="#" class="link8">Транспортные средства </a>
-                    <a href="#" class="link9">Транспортные средства </a>
-                    <a href="#" class="link10">Транспортные средства </a>
-                    <a href="#" class="link11">Транспортные средства </a>
-                    <a href="#" class="link12">Транспортные средства </a>
-                    <a href="#" class="link13">Транспортные средства </a>
-                    <a href="#" class="link14">Транспортные средства </a>
-                    <a href="#" class="link15">Транспортные средства </a>
+                    <a href="#" class="link blue solid">Транспортные средства </a>
+                    <a href="#" class="link blue dashed">Транспортные средства </a>
+                    <a href="#" class="link blue dotted">Транспортные средства </a>
+                    <a href="#" class="link blue opasity_solid_blue">Транспортные средства </a>
+                    <a href="#" class="link blue opasity_dashed_blue">Транспортные средства </a>
+                    <a href="#" class="link blue opasity_dotted_blue">Транспортные средства </a>
+                    <a href="#" class="link red solid">Транспортные средства </a>
+                    <a href="#" class="link red dashed">Транспортные средства </a>
+                    <a href="#" class="link red dotted">Транспортные средства </a>
+                    <a href="#" class="link red opasity_solid_red">Транспортные средства </a>
+                    <a href="#" class="link grey solid">Транспортные средства </a>
+                    <a href="#" class="link grey opasity_dashed_grey">Транспортные средства </a>
+                    <a href="#" class="link grey opasity_dotted_grey">Транспортные средства </a>
+                    <a href="#" class="link grey opasity_solid_grey">Транспортные средства </a>
+                    <a href="#" class="link grey small opasity_solid">Транспортные средства </a>
                 </div>
             </div>
         </div>
@@ -97,14 +97,18 @@
                     <input type="text" class="input-field" placeholder="Фамилия">
                 </div>
                 
-                <!-- <div class="div_input">
-                    <input type="date" class="calendar-input">
-                    <div class="div_img"><img src="" alt=""></div>
-                </div> -->
-                <div class="div_calendar">
+                <form>
+                    <div class="sd-container">
+                    <input class="sd" type="date" name="selected_date" />
+                    <span class="open-button">
+                    <button type="button"><img src="/picture/calendar.png" alt=""></button>
+                    </span>
+                    </div>
+                    </form>
+                <!-- <div class="div_calendar">
                     <div class="input_text">21-12-2015</div>
                     <img src="/picture/calendar.png" alt="">
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -132,32 +136,31 @@
         </div>
     </div>
 </div>
-<div class="table">
-    <div class="container">
-        <div class="table-inner">
-            <h3>Таблицы</h3>
-            <div class="div_table">
-                <div class="line1">
-                    <div class="r1">Название</div>
-                    <div class="r2">Полное название</div>
-                    <div class="r3">Фактический адрес</div>
-                    <div class="r4">Городской телефон</div>
-                </div>
-                <div class="line2">
-                    <div class="r1">Мечта Ленина</div>
-                    <div class="r2">Краснознаменный колхоз "Мечта Ленина" им.Держинского</div>
-                    <div class="r3"></div>
-                    <div class="r4">+7(4822)45-35-27</div>
-                </div>
-                <div class="line3">
-                    <div class="r1">АЛТ+</div>
-                    <div class="r2">ООО "АЛТ ПЛЮС"</div>
-                    <div class="r3">Тверская область,Старицкий район,дер.Юрьевское</div>
-                    <div class="r4">+7(4822)55-76-27</div> 
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container">
+<table>
+    <thead>
+        <tr class="line1">
+            <th class="r1">Название</th>
+            <th class="r2">Полное название</th>
+            <th class="r3">Фактический адрес</th>
+            <th class="r4">Городской телефон</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="line2">
+            <td class="r1">Мечта Ленина</td>
+            <td class="r2">Краснознаменный колхоз "Мечта Ленина" им.Держинского</td>
+            <td class="r3"></td>
+            <td class="r4">+7(4822)45-35-27</td>
+        </tr>
+        <tr class="line3">
+            <td class="r1">АЛТ+</td>
+            <td class="r2">ООО "АЛТ ПЛЮС"</td>
+            <td class="r3">Тверская область,Старицкий район,дер.Юрьевское</td>
+            <td class="r4">+7(4822)55-76-27</td>
+        </tr>
+    </tbody>
+</table>
 </div>
 </body>
 </html>
