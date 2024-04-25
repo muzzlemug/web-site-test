@@ -1,6 +1,6 @@
 .body {
   background: white;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Rogbold-3llGM.otf', Arial, sans-serif; 
 }
 .container {
   padding: 0 35px;
@@ -270,7 +270,10 @@ button {
   font-size: 11px;
 }
 .links-inner h3 {
-  font-size: 24px;
+    padding-top: 18px;
+    font-size: 25px;
+    margin: 0;
+    padding-bottom: 25px;
 }
 .field-inner {
   font-family: Sans-serif;
@@ -281,8 +284,10 @@ button {
   margin-bottom: 23px;
 }
 .field-inner h3 {
-  padding-top: 6px;
-  font-size: 25px;
+    padding-top: 21px;
+    font-size: 25px;
+    margin: 0;
+    padding-bottom: 27px;
 }
 .small-text {
   font-size: 10px;
@@ -330,9 +335,11 @@ input[type="date"] {
 }
 
 .sd {
-  padding: 5px 10px;
-  height: 17px;
-  width: 150px;
+    padding: 5px 10px;
+    height: 22px;
+    width: 133px;
+    border: 1px solid #f4f4f4;
+    border-radius: 5px;
 }
 
 .open-button {
@@ -357,9 +364,10 @@ input[type="date"] {
   font-size: 15px;
 }
 .bloks h3 {
-  font-size: 27px;
-  margin: 0;
-  margin-bottom: 35px;
+    font-size: 27px;
+    margin: 0;
+    margin-bottom: 35px;
+    padding-top: 30px;
 }
 .row1,
 .row2 {
@@ -388,6 +396,9 @@ input[type="date"] {
   max-width: 247px;
   padding: 20px 17px;
   font-size: 16px;
+}
+.div_block_text6{
+    padding: 0px 9px 19px 0px;
 }
 .block3 {
   width: 220px;
@@ -426,43 +437,49 @@ input[type="date"] {
   padding-bottom: 60px;
   border-bottom: 1px solid #cbcbcb;
 }
-.line1 {
-  display: flex;
-  padding-top: 37px;
-  padding-bottom: 15px;
-  border-bottom: 3px double #fadf52;
-  font-size: 12px;
-  font-weight: 600;
-}
-.line2,
-.line3 {
-  display: flex;
-  padding-right: 40px;
-}
-.r {
-  width: 40px;
-  height: 10px;
-  padding: 40px;
-}
 .table-inner h3 {
-  margin: 0;
-  font-size: 27px;
-  padding-top: 22px;
-}
+    margin: 0;
+    font-size: 27px;
+    padding-top: 23px;
+  }
+  
+  .div_table {
+    border-collapse: collapse;
+  }
+  
+  .div_table th,
+  .div_table td {
+    padding: 10px;
+    text-align: left;
 
-.r1 {
-  width: 50px;
-  padding-right: 12px;
-}
-.r2 {
-  width: 176px;
-  padding-right: 16px;
-}
-.r3 {
-  width: 155px;
-  padding-right: 25px;
-}
-.line2 {
-  padding-bottom: 10px;
-  padding-top: 10px;
-}
+  }
+  
+  .div_table th {
+    font-weight: bold;
+    padding-top: 38px;
+  }
+  
+  .div_table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  /* Сохраняем стили, которые были для .line1, .r1, .r2, .r3, .r4, .line2, .line3 */
+  .line1 {
+    padding-top: 37px;
+    padding-bottom: 15px;
+    width:40%;
+    border-bottom: 3px double #fadf52;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .r1 {
+    width: 50px;
+  }
+  
+  .r2 {
+    width: 176px;
+  }
+  
+  .r3 {
+    width: 155px;
+  }
