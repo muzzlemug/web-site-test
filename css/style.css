@@ -1,66 +1,62 @@
-.body {
-  background: white;
-  font-family: 'Rogbold-3llGM.otf', Arial, sans-serif; 
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
+
+body {
+  font-family: 'Open Sans';
+}
+p{
+  margin: 0;
+}
+
 .container {
   padding: 0 35px;
   max-width: 951px;
 }
 .header-inner {
-  font-family: Sans-serif;
-  padding-bottom: 40px;
   border-bottom: 1px solid #cbcbcb;
+  padding-bottom:22px;
 }
 .header-inner h3 {
-  margin: 0;
-  padding-top: 22px;
   font-size: 26px;
 }
-.string {
-  font-size: 55px;
-  font-weight: 500;
-  font-family: sans-serif;
-  padding-top: 17px;
+.header-inner h1{
+  font-size: 51px;
 }
-.re-education {
-  font-size: 28px;
-  padding-top: 13px;
+.header-inner h2{
+  font-size: 25px;
 }
-.calculation {
-  font-size: 21px;
-  padding-top: 17px;
+.header-inner h3,
+.header-inner h1,
+.header-inner h2,
+.header-inner h4,
+.header-inner h5 {
+  margin-top: 0; /* Убираем верхний отступ */
+  margin-bottom: 11px; /* Уменьшаем нижний отступ */
 }
-.guidance_tools {
+.text-and-writes-inner p{
+  padding-bottom:5px;
+  margin:0;
   font-size: 14px;
-  padding-top: 6px;
-  font-weight: 600;
-}
-.quantity {
-  font-size: 17px;
-  padding-top: 6px;
-  font-weight: 600;
 }
 .text-and-writes-inner {
-  padding-bottom: 40px;
+  padding-bottom: 54px;
   border-bottom: 1px solid #cbcbcb;
 }
 .text-and-writes-inner h3 {
-  font-size: 28px;
+  font-size: 26px;
   margin: 0;
-  padding-top: 22px;
+  padding-top: 24px;
 }
-.text1 {
-  padding-top: 32px;
-}
-.text2 {
-  padding-top: 12px;
-  max-width: 536px;
-}
-.text3 {
+.grey{
   padding-top: 13px;
   color: #999999;
 }
-.text4 {
+.qestion{
   border: 1px solid red;
   border-radius: 100%;
   display: flex;
@@ -69,10 +65,8 @@
   color: red;
 }
 ._div_qes {
-  width: 20px;
+  width: 25px;
   height: 20px;
-  /* border: 1px solid red; */
-  /* border-radius: 100%; */
   padding-top: 7px;
   cursor: pointer;
 }
@@ -86,6 +80,17 @@ button {
 .btn {
   border-radius: 3px;
   margin-right: 6px;
+  background: #ffe152;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  padding:10px 20px;
+}
+.btn:hover{
+  opacity:0.5;
+  cursor: pointer;
 }
 
 .div_btn_twice1,
@@ -105,100 +110,44 @@ button {
   display: flex;
   align-items: center;
 }
-.button1:hover,
-.button1:active {
-  background: rgb(251, 220, 80, 0.5);
-}
-.button2:hover,
-.button2:active {
-  background: rgb(244, 25, 57, 0.5);
-}
-.button3:hover,
-.button3:active {
-  background: rgb(44, 135, 249, 0.5);
-}
-.button4:hover,
-.button4:active {
-  background: rgb(144, 52, 249, 0.5);
-}
-.button5:hover,
-.button5:active {
-  background: #f4f4f4;
-}
-.button6:hover,
-.button6:active {
-  background: rgb(251, 220, 80, 0.5);
-  border: none;
-  box-shadow: none;
-}
 .buttons h3 {
   font-size: 27px;
   padding-top: 27px;
   margin: 0;
 }
-.button1 {
+.yellow{
   background: #ffe152;
-  width: 160px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
 }
-.button2 {
+.red_btn{
   background: #f41939;
-  width: 160px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
   color: white;
 }
-.button3 {
+.blue_btn {
   background: #2c87f9;
-  width: 256px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
   color: white;
 }
-.button4 {
+.purple_btn {
   background: #9034f9;
-  width: 214px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: white;
-  font-size: 14px;
 }
 
-.button5 {
+.white_btn{
   border: 1px solid #819bce;
-  width: 166px;
-  height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: #819bce;
   background: white;
 }
 .button5 button {
   color: #819bce;
 }
-.button6 {
+.big_yellow{
   background: #fbdc50;
   border-bottom: 3px solid #d3aa52;
-  width: 218px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 18px;
+  padding:25px 25px;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.big_yellow:hover{
+  box-shadow:none;
 }
 
 .links-inner {
@@ -209,9 +158,9 @@ button {
 .links-column {
   display: flex;
   flex-direction: column;
-  gap: 12px;
   font-size: 15px;
   text-decoration: none;
+  gap:11px;
 }
 .links-column:hover {
   text-decoration: none;
@@ -266,7 +215,7 @@ button {
   text-decoration: underline dotted rgb(131, 140, 149, 0.5);
 }
 .small {
-  color: #838c95;
+  color: #7b8085;
   font-size: 11px;
 }
 .links-inner h3 {
@@ -283,8 +232,11 @@ button {
   font-size: 15px;
   margin-bottom: 23px;
 }
+.input-field:hover{
+  border:1px solid #999999;
+}
 .field-inner h3 {
-    padding-top: 21px;
+    padding-top: 30px;
     font-size: 25px;
     margin: 0;
     padding-bottom: 27px;
@@ -293,6 +245,7 @@ button {
   font-size: 10px;
   padding-left: 14px;
   padding-top: 5px;
+  color:#7b8085;
 }
 .input-field {
   padding-left: 10px;
@@ -332,6 +285,7 @@ input[type="date"] {
 .sd-container {
   position: relative;
   float: left;
+
 }
 
 .sd {
@@ -340,6 +294,10 @@ input[type="date"] {
     width: 133px;
     border: 1px solid #f4f4f4;
     border-radius: 5px;
+    outline: none;
+}
+.sd:hover{
+  border: 1px solid #999999;
 }
 
 .open-button {
@@ -369,28 +327,32 @@ input[type="date"] {
     margin-bottom: 35px;
     padding-top: 30px;
 }
-.row1,
-.row2 {
-  display: flex;
-}
-.row1 {
-  margin-bottom: 19px;
-}
-.row2 {
+.row{
+  flex-direction:row;
+  display:flex;
   margin-bottom: 20px;
 }
 .block1 {
   background-color: white;
   width: 268px;
   min-height: 218px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 5px  rgba(0, 0, 0, 0.1);
   display: flex;
   margin-right: 15px;
 }
-.block2 {
+.square{
   width: 217px;
   min-height: 209px;
+}
+.border_yellow{
   border: 5px solid #fadf52;
+}
+.border_grey{
+  border: 5px solid #d6e0e2;
+  margin-right: 14px;
+}
+.background_grey{
+  background: #f3f3f3;
 }
 .div_block_text {
   max-width: 247px;
@@ -400,86 +362,63 @@ input[type="date"] {
 .div_block_text6{
     padding: 0px 9px 19px 0px;
 }
-.block3 {
-  width: 220px;
-  min-height: 200px;
-  border: 5px solid #d6e0e2;
-  margin-right: 14px;
-}
-.block4 {
-  width: 220px;
-  min-height: 210px;
-  background: #f3f3f3;
-}
-.block5 {
+.header_block{
   display: flex;
   align-items: center;
   min-height: 50px;
   width: 244px;
   padding-left: 28px;
   background: #fadf52;
+  font-size:13px;
 }
-.block6 {
-  min-height: 169px;
+.div_block_text5{
+  min-height: 100px;
   width: 210px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   border-left: 5px solid #fadf52;
   border-right: 5px solid #fadf52;
   border-bottom: 5px solid #fadf52;
-  padding-left: 26px;
-  padding-right: 26px;
+  padding-top: -98px;
   margin: 0;
-  font-size: 16px;
+  font-size: 15px;
+  padding: 18px 26px 36px;
 }
 .bloks-inner {
   padding-bottom: 60px;
   border-bottom: 1px solid #cbcbcb;
 }
 .table-inner h3 {
-    margin: 0;
-    font-size: 27px;
-    padding-top: 23px;
-  }
-  
-  .div_table {
-    border-collapse: collapse;
-  }
-  
-  .div_table th,
-  .div_table td {
-    padding: 10px;
-    text-align: left;
+  margin: 0;
+  font-size: 27px;
+  padding-top: 23px;
+}
 
-  }
-  
-  .div_table th {
-    font-weight: bold;
-    padding-top: 38px;
-  }
-  
-  .div_table tr:last-child td {
-    border-bottom: none;
-  }
-  
-  /* Сохраняем стили, которые были для .line1, .r1, .r2, .r3, .r4, .line2, .line3 */
-  .line1 {
-    padding-top: 37px;
-    padding-bottom: 15px;
-    width:40%;
-    border-bottom: 3px double #fadf52;
-    font-size: 12px;
-    font-weight: 600;
-  }
-  .r1 {
-    width: 50px;
-  }
-  
-  .r2 {
-    width: 176px;
-  }
-  
-  .r3 {
-    width: 155px;
-  }
+.styled-table {
+  width:562px;
+  border-collapse: collapse;
+  height: 200px; /* Установите высоту таблицы, например, 200 пикселей */
+  overflow-y: auto; /* Добавляем скролл по вертикали, если контент больше, чем высота таблицы */
+}
+
+.styled-table th,
+.styled-table td {
+  text-align: left;
+}
+
+.styled-table th {
+  font-weight: bold;
+  padding-top: 38px;
+}
+
+.styled-table tr:last-child td {
+  border-bottom: none;
+}
+
+.styled-table thead tr {
+  border-bottom: 3px double #fadf52;
+  font-size: 12px;
+  font-weight: 600;
+}
+.styled-table tbody tr {
+  height: 25px; /* Установите высоту строк таблицы, например, 25 пикселей */
+}
