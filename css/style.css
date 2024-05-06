@@ -408,6 +408,7 @@ input[type="date"] {
 .styled-table th {
   font-weight: bold;
   padding-top: 38px;
+
 }
 
 .styled-table tr:last-child td {
@@ -421,4 +422,11 @@ input[type="date"] {
 }
 .styled-table tbody tr {
   height: 25px; /* Установите высоту строк таблицы, например, 25 пикселей */
+}
+.styled-table th:hover ,.styled-table td:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+.styled-table tr:hover{
+  background:#fcfafa;
 }
