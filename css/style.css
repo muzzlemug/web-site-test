@@ -406,6 +406,10 @@ input[type="date"] {
   font-size: 27px;
   padding-top: 23px;
 }
+.table-inner{
+  border-bottom: 1px solid #cbcbcb;
+  padding-bottom: 60px;
+}
 
 .styled-table {
   width:562px;
@@ -445,4 +449,95 @@ input[type="date"] {
 }
 .phone{
   white-space: nowrap;
+}
+.form-info {
+  width: 200px;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.form-inputs {
+  width: 600px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+
+.form-input label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-input input,
+.form-input textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+}
+
+.form-input .placeholder {
+  color: #999999;
+}
+.form-input{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.form-input label{
+  margin-right: 30px;
+  width:170px;
+}
+.form-input input{
+  width:376px;
+  border-radius: 5px;
+  outline: none;
+}
+.form-input input:hover{
+  border:1px solid #999999;
+}
+#comment{
+  width:376px;
+  height: 170px;
+  outline: none;
+}
+.checkbox{
+  font-size: 15px;
+  display: flex;
+  margin-left: 197px;
+  margin-top: 16px;
+}
+.btn_and_writer{
+  display:flex;
+  margin-left: 200px;
+  padding-top: 25px;
+  padding-right: 22px;
+}
+.text_in_ankets{
+  padding-left: 22px;
+  font-size: 13px;
+  color:#c0bbc1;
+}
+.text_in_ankets span{
+  text-decoration: underline solid #c0bbc1;
+}
+#ankets{
+  font-size: 27px;
+  padding-top: 27px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.link-navigation{
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+  padding-top: 21px;
+}
+.div_ankets{
+  display:flex;
+}
+.link-navigation a{
+  color:blue;
+}
+.link-navigation a:hover{
+  text-decoration: none;
 }

@@ -5,12 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('.form-input input, .form-input textarea').on('input', function() {
+    var emptyFields = 0;
+    $('.form-input input, .form-input textarea').each(function() {
+      if (!$(this).val()) {
+        emptyFields++;
+      }
+    });
+
+    if (emptyFields === 0) {
+      $('.text_in_ankets span').hide();
+    } else {
+      $('.text_in_ankets span').show();
+    }
+  });
+});
+</script>
 </head>
 <body>
     <div class="headers">
         <div class="container">
             <div class="header-inner">
-                <h3>Заголовки</h3>
+                <h3 id="headers">Заголовки</h3>
                 <h1>Вереница вареников</h1>
                 <h2>Переобразование</h2>
                 <h4>Расчет топлива</h4>
@@ -22,7 +41,7 @@
     <div class="text-and-writes">
         <div class="container">
             <div class="text-and-writes-inner">
-                <h3>Текст и подписи </h3>
+                <h3 id="text-and-writes">Текст и подписи </h3>
                 <p>Возврат на Хуари Бумедьен -700км, через 1 час 30 минут,</p>
                 <p>Су-25 впервые поднялся в воздух 22 февраля 1975 года. Самолеты этого типа<br>
                 эксплуатируются с 1981 года, принимали участие во множестве военных<br>
@@ -40,7 +59,7 @@
     <div class="buttons">
         <div class="container">
             <div class="buttons-inner">
-                <h3>Кнопки</h3>
+                <h3 id="buttons">Кнопки</h3>
             <div class="div_btn_twice1">
                 <button class="btn yellow_btn">Подробный отчет</button>
                 <button class="btn red_btn">Опасный маневр</button>
@@ -59,7 +78,7 @@
     <div class="links">
         <div class="container">
             <div class="links-inner">
-                <h3>Ссылки</h3>
+                <h3 id="links">Ссылки</h3>
                 <div class="links-column">
                     <p><a href="#" class="link blue solid">Транспортные средства </a></p>
                     <p><a href="#" class="link blue dashed">Транспортные средства </a></p>
@@ -84,7 +103,7 @@
 <div class="field">
     <div class="container">
         <div class="field-inner">
-            <h3>Поля ввода</h3>
+            <h3 id="input">Поля ввода</h3>
             <div class="input">
                 <div class="div_input">
                     <input type="text" class="input-field" placeholder="Ввод данных">
@@ -120,7 +139,7 @@
 <div class="bloks">
     <div class="container">
         <div class="bloks-inner">
-            <h3>Блоки</h3>
+            <h3 id="blocks">Блоки</h3>
             <div class="div_bloks">
                 <div class="row">
                     <div class="block1">
@@ -145,7 +164,7 @@
 <div class="table">
     <div class="container">
         <div class="table-inner">
-            <h3>Таблицы</h3>
+            <h3 id="table">Таблицы</h3>
             <table class="styled-table">
                 <thead>
                     <tr>
@@ -170,6 +189,69 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+    </div>
+</div>
+<div class="ankets">
+    <div class="container">
+        <h3 id="ankets">Правильная анкета</h3>
+        <div class="div_ankets">
+            <div class="link-navigation">
+                <p><a href="#headers">Заголовки</a></p>
+                <p><a href="#text-and-writes">Текст и подписи</a></p>
+                <p><a href="#buttons">Кнопки</a></p>
+                <p><a href="#links">Ссылки</a></p>
+                <p><a href="#input">Поля ввода</a></p>
+                <p><a href="#blocks">Блоки</a></p>
+                <p><a href="#table">Таблицы</a></p>
+                <p><a href="#ankets">Правильная анкета</a></p>
+            </div>
+        <div class="ankets-inner">
+                <div class="form-inputs">
+                  <div class="form-input">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" class="placeholder" placeholder="Имя">
+                  </div>
+                  <div class="form-input">
+                    <label for="surname">Фамилия</label>
+                    <input type="text" id="surname" class="placeholder" placeholder="Фамилия">
+                  </div>
+                  <div class="form-input">
+                    <label for="patronymic">Отчество</label>
+                    <input type="text" id="patronymic" class="placeholder" placeholder="Отчество">
+                  </div>
+                  <div class="form-input">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="placeholder" placeholder="Email">
+                  </div>
+                  <div class="form-input">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" class="placeholder" placeholder="Пароль">
+                  </div>
+                  <div class="form-input">
+                    <label for="confirm-password">Подтвердите пароль</label>
+                    <input type="password" id="confirm-password" class="placeholder" placeholder="Подтвердите пароль">
+                  </div>
+                  <div class="form-input">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" class="placeholder" placeholder="Телефон">
+                  </div>
+                  <div class="form-input comment">
+                    <label for="comment">Комментарий</label>
+                    <textarea id="comment" class="placeholder" placeholder="Комментарий"></textarea>
+                  </div>
+                  <div class="checkbox">
+                    <label for="license-agreement">
+                      <input type="checkbox" id="license-agreement"> Пожалуйста, примите лицензионное соглашение
+                    </label>
+                  </div>
+                  <div class="btn_and_writer">
+                    <button class="btn big_yellow">Отправить</button>
+                    <div class="text_in_ankets">Не заполнены обязательные поля : <span>Имя</span> ,<span>Фамилия</span>,<span>Отчество</span>,<span>E-mail</span>,<span>Пароль</span>,<span>Подтверждение пароля</span>,<span>Телефон</span></div>
+                  </div>
+                </div>
+              </div>
+        </div>
         </div>
     </div>
 </div>
