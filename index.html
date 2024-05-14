@@ -5,25 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(document).ready(function() {
-  $('.form-input input, .form-input textarea').on('input', function() {
-    var emptyFields = 0;
-    $('.form-input input, .form-input textarea').each(function() {
-      if (!$(this).val()) {
-        emptyFields++;
-      }
-    });
-
-    if (emptyFields === 0) {
-      $('.text_in_ankets span').hide();
-    } else {
-      $('.text_in_ankets span').show();
-    }
-  });
-});
-</script>
 </head>
 <body>
     <div class="headers">
@@ -247,7 +228,16 @@ $(document).ready(function() {
                   </div>
                   <div class="btn_and_writer">
                     <button class="btn big_yellow">Отправить</button>
-                    <div class="text_in_ankets">Не заполнены обязательные поля : <span>Имя</span> ,<span>Фамилия</span>,<span>Отчество</span>,<span>E-mail</span>,<span>Пароль</span>,<span>Подтверждение пароля</span>,<span>Телефон</span></div>
+                    <div class="text_in_ankets">
+                        Не заполнены обязательные поля : 
+                        <span id="name-required">Имя,</span>
+                        <span id="surname-required">Фамилия,</span>
+                        <span id="patronymic-required">Отчество,</span>
+                        <span id="email-required">E-mail,</span>
+                        <span id="password-required">Пароль,</span>
+                        <span id="confirm-password-required">Подтверждение пароля,</span>
+                        <span id="phone-required">Телефон.</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -255,5 +245,6 @@ $(document).ready(function() {
         </div>
     </div>
 </div>
+<script src="js/index.js"></script>
 </body>
 </html>
