@@ -1,3 +1,54 @@
+//Пока поля ввода не заполнены , кнопку нельзя нажать 
+/*document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('registration-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const requiredFields = form.querySelectorAll('[required]');
+    
+    function checkFormValidity() {
+        let allFilled = true;
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                allFilled = false;
+            }
+        });
+        submitBtn.disabled = !allFilled;
+    }
+    
+    requiredFields.forEach(field => {
+        field.addEventListener('input', checkFormValidity);
+    });
+    
+    checkFormValidity();
+});
+*/
+//disabled button 
+document.addEventListener('DOMContentLoaded', function() {
+    const inputFields = document.querySelectorAll('.form-inputs .form-input input');
+    const submitButton = document.getElementById('submitButton');
+
+    function checkInputFields() {
+        let allFieldsFilled = true;
+        inputFields.forEach(field => {
+            if (!field.value.trim()) {
+                allFieldsFilled = false;
+            }
+        });
+
+        if (allFieldsFilled) {
+            submitButton.disabled = false;
+        } else {
+            submitButton.disabled = true;
+        }
+    }
+
+    inputFields.forEach(field => {
+        field.addEventListener('input', checkInputFields);
+    });
+
+    // Проверка начального состояния
+    checkInputFields();
+});
+/////ИСЧЕЗНОВЕНИЕ НАДПИСЕЙ 
 document.addEventListener('DOMContentLoaded', function() {
     const inputs = document.querySelectorAll('.placeholder');
   
@@ -14,3 +65,20 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const inputs = document.querySelectorAll('.placeholder');
+    const requiredFieldsMsg = document.getElementById('required-fields-msg');
+
+    function checkAllFieldsFilled() {
+        const allFieldsFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+        requiredFieldsMsg.style.display = allFieldsFilled ? 'none' : 'block';
+    }
+
+    inputs.forEach(input => {
+        input.addEventListener('input', checkAllFieldsFilled);
+    });
+
+    checkAllFieldsFilled(); // Проверяем, заполнены ли все поля при загрузке страницы
+});
+
