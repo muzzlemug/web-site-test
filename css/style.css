@@ -518,9 +518,41 @@ input[type="date"] {
 .checkbox{
   font-size: 15px;
   display: flex;
+  align-items: center;
   margin-left: 197px;
   margin-top: 16px;
 }
+.checkbox label{
+  position: relative;
+  padding-left: 30px; /* Отступ для чекбокса */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkbox .checkmark {
+  position: absolute;
+  left: 0;
+  top:50%;
+  transform: translateY(-50%);
+  width: 20px; /* Задайте размеры в соответствии с вашими изображениями */
+  height: 20px;
+  background-image: url('/picture/fon.svg'); /* Путь к вашему изображению для обычного состояния */
+  background-size: cover;
+}
+.checkbox label:hover .checkmark {
+  background-image: url('/picture/fon1.svg'); /* Путь к вашему изображению для состояния при наведении */
+}
+
+/* Состояние при нажатии */
+.checkbox input:checked + .checkmark {
+  background-image: url('/picture/fon2.svg'); /* Путь к вашему изображению для состояния при нажатии */
+}
+
 .btn_and_writer{
   display:flex;
   margin-left: 200px;
@@ -575,6 +607,7 @@ input[type="date"] {
 .right-wriper{
   margin:0 auto;
 }
+
 #required-fields-msg {
   display: inline; /* По умолчанию элемент отображается */
 }
@@ -583,3 +616,4 @@ input[type="date"] {
 [id$="-required"] {
   display: inline; /* По умолчанию элементы отображаются */
 }
+/*
