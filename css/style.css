@@ -8,6 +8,7 @@
 
 body {
   font-family: 'Open Sans';
+  font-size:14px;
 }
 p{
   margin: 0;
@@ -373,9 +374,18 @@ input[type="date"] {
   width: 217px;
   min-height: 209px;
 }
-.border_yellow{
+.block5{
   border: 5px solid #fadf52;
-  min-height: 163px;;
+    min-height: 163px;
+    width: 265px;
+}
+.header_block{
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  padding: 5px 3px 5px 23px;
+  background: #fadf52;
+  font-size: 13px;
 }
 .border_grey{
   border: 5px solid #d6e0e2;
@@ -385,20 +395,10 @@ input[type="date"] {
   background: #f3f3f3;
 }
 .div_block_text {
-  max-width: 247px;
   padding: 20px 17px;
-  font-size: 16px;
+  font-size: 14px;
 }
-.header_block{
-  display: flex;
-  align-items: center;
-  min-height: 50px;
-  width: min-width;
-  padding: 3px 3px 3px 23px;
-  background: #fadf52;
-  font-size: 13px;
-  width: 264px;
-}
+
 .div_block_text5{
   min-height: 100px;
   width: 210px;
@@ -458,9 +458,11 @@ input[type="date"] {
 .styled-table th:hover ,.styled-table td:hover{
   cursor: pointer;
 }
-.styled-table td:hover{
-  background:#fcfafa;
+.hover_table:hover {
+  background: #fcfafa;
 }
+
+
 .phone{
   white-space: nowrap;
 }
@@ -500,6 +502,7 @@ input[type="date"] {
   margin-right: 30px;
   width:170px;
   display: flex;
+  flex-direction: row-reverse;
 }
 .form-input input{
   width:376px;
@@ -515,42 +518,53 @@ input[type="date"] {
   outline: none;
   resize: none;
 }
-.checkbox{
+.checkbox {
   font-size: 15px;
   display: flex;
   align-items: center;
   margin-left: 197px;
   margin-top: 16px;
 }
-.checkbox label{
+
+.checkbox label {
   position: relative;
   padding-left: 30px; /* Отступ для чекбокса */
   cursor: pointer;
   display: flex;
   align-items: center;
 }
+
 .checkbox input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
+
 .checkbox .checkmark {
   position: absolute;
   left: 0;
-  top:50%;
+  top: 50%;
   transform: translateY(-50%);
   width: 20px; /* Задайте размеры в соответствии с вашими изображениями */
   height: 20px;
   background-image: url('/picture/fon.svg'); /* Путь к вашему изображению для обычного состояния */
   background-size: cover;
 }
+
+/* При наведении на чекбокс совмещаем фон и бледную галочку */
 .checkbox label:hover .checkmark {
-  background-image: url('/picture/fon1.svg'); /* Путь к вашему изображению для состояния при наведении */
+  background-image: url('/picture/fon2.svg'), url('/picture/fon.svg'); /* Путь к вашему изображению для состояния при наведении */
+  background-position: center, center; /* Позиционирование изображений */
+  background-repeat: no-repeat, no-repeat; /* Отключение повторения изображений */
+  background-size: contain, contain; /* Убедитесь, что оба изображения вписываются в размер чекбокса */
 }
 
 /* Состояние при нажатии */
 .checkbox input:checked + .checkmark {
-  background-image: url('/picture/fon2.svg'); /* Путь к вашему изображению для состояния при нажатии */
+  background-image: url('/picture/fon1.svg'), url('/picture/fon2.svg'); /* Путь к вашему изображению для состояния при нажатии */
+  background-position: center, center; /* Позиционирование изображений */
+  background-repeat: no-repeat, no-repeat; /* Отключение повторения изображений */
+  background-size: contain, contain; /* Убедитесь, что оба изображения вписываются в размер чекбокса */
 }
 
 .btn_and_writer{
@@ -563,16 +577,24 @@ input[type="date"] {
   padding-left: 22px;
   font-size: 13px;
   color:#c0bbc1;
+  white-space: nowrap;
 }
 .text_in_ankets span{
   text-decoration: underline solid #c0bbc1;
 }
-.text_in_ankets label::after{
-  content:",";
+.text_in_ankets label::after {
+  content: "";
 }
-#phone-required::after{
-  content:".";
+
+/* Эти стили больше не нужны */
+.text_in_ankets label[id$="-required"]::after {
+  content: "";
 }
+
+.text_in_ankets label[id$="-required"]:last-child::after {
+  content: "";
+}
+
 #ankets{
   font-size: 27px;
   padding-top: 27px;
