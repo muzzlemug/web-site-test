@@ -374,19 +374,33 @@ input[type="date"] {
   width: 217px;
   min-height: 209px;
 }
-.block5{
+.block5 {
   border: 5px solid #fadf52;
-    min-height: 163px;
-    width: 265px;
+  min-height: 163px; /* Минимальная высота блока */
+  width: 265px; /* Фиксированная ширина блока */
+  box-sizing: border-box; /* Учитываем границы в расчетах размеров */
+  white-space: normal; /* Разрешаем перенос строк */
 }
-.header_block{
-  display: flex;
-  align-items: center;
-  min-height: 50px;
-  padding: 5px 3px 5px 23px;
+
+.header_block {
+  padding: 10px;
   background: #fadf52;
   font-size: 13px;
+  height: auto; /* Блок растягивается по высоте */
+  box-sizing: border-box; /* Учитываем отступы в расчетах размеров */
 }
+
+.text_in_header {
+  max-width: 100%; /* Ограничиваем ширину блока в пределах родительского */
+  white-space: normal; /* Разрешаем перенос строк */
+  overflow-wrap: break-word; /* Переносим длинные слова */
+  word-wrap: break-word; /* Переносим длинные слова для совместимости с IE */
+  height: auto; /* Блок растягивается по высоте */
+  display: block; /* Обеспечиваем блочное поведение элемента */
+}
+
+
+
 .border_grey{
   border: 5px solid #d6e0e2;
   margin-right: 14px;
@@ -395,7 +409,7 @@ input[type="date"] {
   background: #f3f3f3;
 }
 .div_block_text {
-  padding: 20px 17px;
+  padding: 20px 30px 55px 22px;
   font-size: 14px;
 }
 
@@ -567,6 +581,10 @@ input[type="date"] {
   background-size: contain, contain; /* Убедитесь, что оба изображения вписываются в размер чекбокса */
 }
 
+.checkbox input + .checkmark {
+  opacity: 0.5; /* Прозрачность галочки */
+}
+
 .btn_and_writer{
   display:flex;
   margin-left: 200px;
@@ -577,13 +595,15 @@ input[type="date"] {
   padding-left: 22px;
   font-size: 13px;
   color:#c0bbc1;
-  white-space: nowrap;
 }
 .text_in_ankets span{
   text-decoration: underline solid #c0bbc1;
 }
 .text_in_ankets label::after {
   content: "";
+}
+.text_in_ankets span{
+  white-space: nowrap;
 }
 
 /* Эти стили больше не нужны */
