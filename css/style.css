@@ -68,10 +68,10 @@ p{
   justify-content: center;
   align-items: center;
   color: red;
+  height: 22px;
+  width:22px;
 }
 ._div_qes {
-  width: 25px;
-  height: 20px;
   padding-top: 7px;
   cursor: pointer;
 }
@@ -287,31 +287,6 @@ background:rgb(244 ,25 ,57,0.5);
   outline: none;
 }
 
-/* Скрытие стандартной иконки
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {
-display: none;
--webkit-appearance: none;
-}
-input[type="date"] {
-    background: url('/picture/calendar.png') no-repeat 5px right;
-    background-size: 20px;
-    padding-left: 35px; /* Убедитесь, что ваша иконка не перекрывает текст */
-/* height: 30px; /* Установите желаемую высоту поля ввода */
-/* width: 150px; Установите желаемую ширину поля ввода */
-/* border: 1px solid #ccc; */
-/* border-radius: 4px; */
-/* padding: 5px; */
-/* box-sizing: border-box; */
-/* } */
-/* input[type="date"] ::-webkit-calendar-picker-indicator {
-        background-image: url(/picture/calendar.png);
-        background-size: 19px;
-        background-repeat: no-repeat;
-        /* background-position-y: bottom; */
-/* background-position: 128px 7px; */
-/* } */
-
 .sd-container {
   position: relative;
   float: left;
@@ -383,7 +358,7 @@ input[type="date"] {
 }
 
 .header_block {
-  padding: 10px;
+  padding: 10px 10px 10px 20px;
   background: #fadf52;
   font-size: 13px;
   height: auto; /* Блок растягивается по высоте */
@@ -449,6 +424,7 @@ input[type="date"] {
 .styled-table th,
 .styled-table td {
   text-align: left;
+  padding-top: 10px;
 }
 
 .styled-table th {
@@ -491,13 +467,6 @@ input[type="date"] {
   padding: 20px;
   background-color: #ffffff;
 }
-
-
-.form-input label {
-  display: block;
-  margin-bottom: 5px;
-}
-
 .form-input input,
 .form-input textarea {
   width: 100%;
@@ -517,6 +486,10 @@ input[type="date"] {
   width:170px;
   display: flex;
   flex-direction: row-reverse;
+  display: block;
+  margin-bottom: 5px;
+  cursor: pointer;
+  padding-top:10px;
 }
 .form-input input{
   width:376px;
@@ -538,6 +511,7 @@ input[type="date"] {
   align-items: center;
   margin-left: 197px;
   margin-top: 16px;
+  border:1px solid red;
 }
 
 .checkbox label {
@@ -547,7 +521,6 @@ input[type="date"] {
   display: flex;
   align-items: center;
 }
-
 .checkbox input {
   position: absolute;
   opacity: 0;
@@ -559,30 +532,28 @@ input[type="date"] {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 20px; /* Задайте размеры в соответствии с вашими изображениями */
-  height: 20px;
-  background-image: url('/picture/fon.svg'); /* Путь к вашему изображению для обычного состояния */
-  background-size: cover;
+  width: 17px; /* Задайте размеры в соответствии с вашими изображениями */
+  height: 23px;
+  background-image: url('/picture/fon.svg');
+  background-size: cover; /* Путь к вашему изображению для обычного состояния */
 }
 
 /* При наведении на чекбокс совмещаем фон и бледную галочку */
 .checkbox label:hover .checkmark {
   background-image: url('/picture/fon2.svg'), url('/picture/fon.svg'); /* Путь к вашему изображению для состояния при наведении */
-  background-position: center, center; /* Позиционирование изображений */
+  background-position: center,center;
   background-repeat: no-repeat, no-repeat; /* Отключение повторения изображений */
   background-size: contain, contain; /* Убедитесь, что оба изображения вписываются в размер чекбокса */
+  opacity: 0.5;
+  transition: 0.5s;
 }
 
 /* Состояние при нажатии */
 .checkbox input:checked + .checkmark {
   background-image: url('/picture/fon1.svg'), url('/picture/fon2.svg'); /* Путь к вашему изображению для состояния при нажатии */
-  background-position: center, center; /* Позиционирование изображений */
+  background-position: center, center;
   background-repeat: no-repeat, no-repeat; /* Отключение повторения изображений */
-  background-size: contain, contain; /* Убедитесь, что оба изображения вписываются в размер чекбокса */
-}
-
-.checkbox input + .checkmark {
-  opacity: 0.5; /* Прозрачность галочки */
+  /* background-size: contain, contain; Убедитесь, что оба изображения вписываются в размер чекбокса */
 }
 
 .btn_and_writer{
@@ -596,9 +567,15 @@ input[type="date"] {
   font-size: 13px;
   color:#c0bbc1;
 }
-.text_in_ankets span{
+.text_in_ankets label{
   text-decoration: underline solid #c0bbc1;
+  cursor: pointer;
 }
+.text_in_ankets label:hover{
+  color:red;
+  text-decoration: none;
+}
+
 .text_in_ankets label::after {
   content: "";
 }
@@ -622,7 +599,6 @@ input[type="date"] {
   margin-bottom: 30px;
 }
 .link-navigation{
-
   width: 200px;
 }
 .div_ankets{
