@@ -125,3 +125,24 @@ document.addEventListener('DOMContentLoaded', function() {
     checkAllFieldsFilled(); // Проверяем, заполнены ли все поля при загрузке страницы
     updatePunctuation(); // Устанавливаем правильные знаки препинания при загрузке страницы
 });
+//////////////////////////////////////////////
+/*error mes*/
+/////////////////
+document.addEventListener('DOMContentLoaded', function() {
+    const inputs = document.querySelectorAll('.input-field');
+
+    inputs.forEach(input => {
+        input.addEventListener('input', function() {
+            const errorMessage = input.nextElementSibling;
+            if (input.value.trim() === '2') {
+                input.classList.add('error');
+            } else {
+                input.classList.remove('error');
+            }
+        });
+    });
+});
+
+
+  
+  

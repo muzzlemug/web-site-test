@@ -479,6 +479,7 @@ background:rgb(244 ,25 ,57,0.5);
 }
 .form-input{
   display: flex;
+  position: relative;
   margin-bottom: 10px;
 }
 .form-input label{
@@ -511,7 +512,7 @@ background:rgb(244 ,25 ,57,0.5);
   align-items: center;
   margin-left: 197px;
   margin-top: 16px;
-  border:1px solid red;
+  
 }
 
 .checkbox label {
@@ -520,6 +521,7 @@ background:rgb(244 ,25 ,57,0.5);
   cursor: pointer;
   display: flex;
   align-items: center;
+  
 }
 .checkbox input {
   position: absolute;
@@ -536,24 +538,26 @@ background:rgb(244 ,25 ,57,0.5);
   height: 23px;
   background-image: url('/picture/fon.svg');
   background-size: cover; /* Путь к вашему изображению для обычного состояния */
+  width:24px;
+  height:24px;
 }
 
 /* При наведении на чекбокс совмещаем фон и бледную галочку */
 .checkbox label:hover .checkmark {
   background-image: url('/picture/fon2.svg'), url('/picture/fon.svg'); /* Путь к вашему изображению для состояния при наведении */
-  background-position: center,center;
+  background-position: 4px -6px, 0 0;
   background-repeat: no-repeat, no-repeat; /* Отключение повторения изображений */
-  background-size: contain, contain; /* Убедитесь, что оба изображения вписываются в размер чекбокса */
+  background-size: 100% 100%, 100% 100%;/* Убедитесь, что оба изображения вписываются в размер чекбокса */
   opacity: 0.5;
-  transition: 0.5s;
 }
 
 /* Состояние при нажатии */
+
 .checkbox input:checked + .checkmark {
   background-image: url('/picture/fon1.svg'), url('/picture/fon2.svg'); /* Путь к вашему изображению для состояния при нажатии */
-  background-position: center, center;
+  background-position: 0 0, 4px -6px; /* Изменение позиционирования второго изображения, чтобы оно было выше */
   background-repeat: no-repeat, no-repeat; /* Отключение повторения изображений */
-  /* background-size: contain, contain; Убедитесь, что оба изображения вписываются в размер чекбокса */
+  background-size: auto,auto;
 }
 
 .btn_and_writer{
@@ -634,4 +638,26 @@ background:rgb(244 ,25 ,57,0.5);
 [id$="-required"] {
   display: inline; /* По умолчанию элементы отображаются */
 }
-/*
+.input-field.error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.input-field.error::placeholder {
+  color: transparent;
+}
+
+.input-field.error + .error-message {
+  opacity: 1;
+}
