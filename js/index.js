@@ -129,20 +129,109 @@ document.addEventListener('DOMContentLoaded', function() {
 /*error mes*/
 /////////////////
 document.addEventListener('DOMContentLoaded', function() {
-    const inputs = document.querySelectorAll('.input-field');
+    const form = document.getElementById('form');
+    const inputs = form.querySelectorAll('.placeholder');
 
     inputs.forEach(input => {
+        const errorMessage = input.nextElementSibling;
+
+        input.addEventListener('blur', function() {
+            validateInput(input, errorMessage);
+        });
+
         input.addEventListener('input', function() {
-            const errorMessage = input.nextElementSibling;
-            if (input.value.trim() === '2') {
+            if (input.value.trim() === '') {
                 input.classList.add('error');
+                errorMessage.style.visibility = 'visible';
+                errorMessage.style.opacity = '1';
             } else {
                 input.classList.remove('error');
+                errorMessage.style.visibility = 'hidden';
+                errorMessage.style.opacity = '0';
             }
         });
     });
+
+    form.addEventListener('submit', function(event) {
+        let formIsValid = true;
+
+        inputs.forEach(input => {
+            const errorMessage = input.nextElementSibling;
+            if (!validateInput(input, errorMessage)) {
+                formIsValid = false;
+            }
+        });
+
+        if (!formIsValid) {
+            event.preventDefault(); // Останавливает отправку формы
+        }
+    });
+
+    function validateInput(input, errorMessage) {
+        let valid = true;
+        switch (input.id) {
+            case 'name':
+                if (input.value.trim() === '') {
+                    errorMessage.textContent = 'Пожалуйста, введите имя';
+                    valid = false;
+                }
+                break;
+            case 'surname':
+                if (input.value.trim().length < 5 || input.value.trim().length > 20) {
+                    errorMessage.textContent = 'Длина фамилии должна быть от 5 до 20 знаков';
+                    valid = false;
+                }
+                break;
+            case 'patronymic':
+                if (input.value.trim().length < 3) {
+                    errorMessage.textContent = 'Ваше отчество должно состоять не менее чем из 3 символов';
+                    valid = false;
+                }
+                break;
+            case 'email':
+                const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                if (!emailPattern.test(input.value.trim())) {
+                    errorMessage.textContent = 'Неверный формат E-mail';
+                    valid = false;
+                }
+                break;
+            case 'password':
+                if (input.value.trim().length < 5) {
+                    errorMessage.textContent = 'Ваш пароль должен быть длиной не менее 5 символов';
+                    valid = false;
+                }
+                break;
+            case 'confirm-password':
+                const password = document.getElementById('password').value.trim();
+                if (input.value.trim() !== password) {
+                    errorMessage.textContent = 'Пожалуйста, введите тот же пароль, что и выше';
+                    valid = false;
+                }
+                break;
+            case 'phone':
+                const phonePattern = /^\+?\d{1,4}?[\d\s-]{5,20}$/;
+                if (!phonePattern.test(input.value.trim())) {
+                    errorMessage.textContent = 'Пожалуйста, введите телефон';
+                    valid = false;
+                }
+                break;
+            default:
+                break;
+        }
+
+        if (!valid) {
+            input.classList.add('error');
+            errorMessage.style.visibility = 'visible';
+            errorMessage.style.opacity = '1';
+        } else {
+            input.classList.remove('error');
+            errorMessage.style.visibility = 'hidden';
+            errorMessage.style.opacity = '0';
+        }
+
+        return valid;
+    }
 });
 
 
-  
   

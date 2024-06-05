@@ -638,26 +638,28 @@ background:rgb(244 ,25 ,57,0.5);
 [id$="-required"] {
   display: inline; /* По умолчанию элементы отображаются */
 }
-.input-field.error {
+  .placeholder.error {
   border-color: red;
+  height:35px;
+  padding-top:0;
+}
+.placeholder.error:hover{
+  border-color: red;
+  height:35px;
 }
 
 .error-message {
   color: red;
   font-size: 12px;
   position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  pointer-events: none;
+  bottom: 4px; /* Отступ вниз от поля ввода */
+  left: 210px;
+  visibility: hidden;
   opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.input-field.error::placeholder {
-  color: transparent;
+  transition: visibility 0s, opacity 0.3s linear;
 }
 
 .input-field.error + .error-message {
+  visibility: visible;
   opacity: 1;
 }
