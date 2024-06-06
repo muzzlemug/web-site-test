@@ -540,24 +540,53 @@ background:rgb(244 ,25 ,57,0.5);
   background-size: cover; /* Путь к вашему изображению для обычного состояния */
   width:24px;
   height:24px;
+  z-index: 1;
 }
 
 /* При наведении на чекбокс совмещаем фон и бледную галочку */
 .checkbox label:hover .checkmark {
-  background-image: url('/picture/fon2.svg'), url('/picture/fon.svg'); /* Путь к вашему изображению для состояния при наведении */
-  background-position: 4px -6px, 0 0;
+  background-image:url('/picture/fon.svg'); /* Путь к вашему изображению для состояния при наведении */
+  background-position: center;
   background-repeat: no-repeat, no-repeat; /* Отключение повторения изображений */
-  background-size: 100% 100%, 100% 100%;/* Убедитесь, что оба изображения вписываются в размер чекбокса */
+  background-size:auto, auto;/* Убедитесь, что оба изображения вписываются в размер чекбокса */
   opacity: 0.5;
+  z-index: 1;
+}
+.checkbox input:checked + .checkmark::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-image: url(/picture/fon2.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  z-index: -1;
 }
 
 /* Состояние при нажатии */
 
 .checkbox input:checked + .checkmark {
-  background-image: url('/picture/fon1.svg'), url('/picture/fon2.svg'); /* Путь к вашему изображению для состояния при нажатии */
-  background-position: 0 0, 4px -6px; /* Изменение позиционирования второго изображения, чтобы оно было выше */
+  background-image: url('/picture/fon1.svg'); /* Путь к вашему изображению для состояния при нажатии */
+  background-position:center; /* Изменение позиционирования второго изображения, чтобы оно было выше */
   background-repeat: no-repeat, no-repeat; /* Отключение повторения изображений */
   background-size: auto,auto;
+  z-index: 1;
+}
+.checkbox label:hover .checkmark::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-image: url(/picture/fon2.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  z-index: -1;
 }
 
 .btn_and_writer{
