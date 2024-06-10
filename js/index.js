@@ -93,14 +93,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updatePunctuation() {
-        let visibleLabels = Array.from(labels).filter(label => label.style.display !== 'none');
-        
+        const visibleLabels = Array.from(labels).filter(label => label.style.display !== 'none');
+
         visibleLabels.forEach((label, index) => {
-            label.textContent = label.textContent.replace(/[,.]*$/, '');
+            label.classList.remove('comma', 'period');
             if (index < visibleLabels.length - 1) {
-                label.textContent += ',';
+                label.classList.add('comma');
             } else {
-                label.textContent += '.';
+                label.classList.add('period');
             }
         });
     }
@@ -125,47 +125,14 @@ document.addEventListener('DOMContentLoaded', function() {
     checkAllFieldsFilled(); // Проверяем, заполнены ли все поля при загрузке страницы
     updatePunctuation(); // Устанавливаем правильные знаки препинания при загрузке страницы
 });
+
 //////////////////////////////////////////////
 /*error mes*/
 /////////////////
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('form');
     const inputs = form.querySelectorAll('.placeholder');
-
-    inputs.forEach(input => {
-        const errorMessage = input.nextElementSibling;
-
-        input.addEventListener('blur', function() {
-            validateInput(input, errorMessage);
-        });
-
-        input.addEventListener('input', function() {
-            if (input.value.trim() === '') {
-                input.classList.add('error');
-                errorMessage.style.visibility = 'visible';
-                errorMessage.style.opacity = '1';
-            } else {
-                input.classList.remove('error');
-                errorMessage.style.visibility = 'hidden';
-                errorMessage.style.opacity = '0';
-            }
-        });
-    });
-
-    form.addEventListener('submit', function(event) {
-        let formIsValid = true;
-
-        inputs.forEach(input => {
-            const errorMessage = input.nextElementSibling;
-            if (!validateInput(input, errorMessage)) {
-                formIsValid = false;
-            }
-        });
-
-        if (!formIsValid) {
-            event.preventDefault(); // Останавливает отправку формы
-        }
-    });
+    const submitButton = document.getElementById('submitButton');
 
     function validateInput(input, errorMessage) {
         let valid = true;
@@ -231,7 +198,57 @@ document.addEventListener('DOMContentLoaded', function() {
 
         return valid;
     }
+
+    function checkFormValidity() {
+        let formIsValid = true;
+
+        inputs.forEach(input => {
+            const errorMessage = input.nextElementSibling;
+            if (!validateInput(input, errorMessage)) {
+                formIsValid = false;
+            }
+        });
+
+        submitButton.disabled = !formIsValid;
+    }
+
+    inputs.forEach(input => {
+        const errorMessage = input.nextElementSibling;
+
+        input.addEventListener('blur', function() {
+            validateInput(input, errorMessage);
+            checkFormValidity();
+        });
+
+        input.addEventListener('input', function() {
+            if (input.value.trim() === '') {
+                input.classList.add('error');
+                errorMessage.style.visibility = 'visible';
+                errorMessage.style.opacity = '1';
+            } else {
+                input.classList.remove('error');
+                errorMessage.style.visibility = 'hidden';
+                errorMessage.style.opacity = '0';
+            }
+            checkFormValidity();
+        });
+    });
+
+    form.addEventListener('submit', function(event) {
+        let formIsValid = true;
+
+        inputs.forEach(input => {
+            const errorMessage = input.nextElementSibling;
+            if (!validateInput(input, errorMessage)) {
+                formIsValid = false;
+            }
+        });
+
+        if (!formIsValid) {
+            event.preventDefault(); // Останавливает отправку формы
+        }
+    });
+
+    // Проверка валидности формы при загрузке страницы
+    checkFormValidity();
 });
-
-
-  
