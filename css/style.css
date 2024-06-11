@@ -673,6 +673,7 @@ background:rgb(244 ,25 ,57,0.5);
   border-color: red;
   height:35px;
   padding-top:0;
+  margin-bottom: -10px;
 }
 .placeholder.error:hover{
   border-color: red;
@@ -683,7 +684,7 @@ background:rgb(244 ,25 ,57,0.5);
   color: red;
   font-size: 12px;
   position: absolute;
-  bottom: 4px; /* Отступ вниз от поля ввода */
+  bottom: -7px; /* Отступ вниз от поля ввода */
   left: 210px;
   visibility: hidden;
   opacity: 0;

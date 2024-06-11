@@ -133,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('form');
     const inputs = form.querySelectorAll('.placeholder');
     const submitButton = document.getElementById('submitButton');
+    const touchedInputs = new Set();
 
     function validateInput(input, errorMessage) {
         let valid = true;
@@ -186,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
         }
 
-        if (!valid) {
+        if (!valid && touchedInputs.has(input)) {
             input.classList.add('error');
             errorMessage.style.visibility = 'visible';
             errorMessage.style.opacity = '1';
@@ -216,19 +217,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const errorMessage = input.nextElementSibling;
 
         input.addEventListener('blur', function() {
+            touchedInputs.add(input);
             validateInput(input, errorMessage);
             checkFormValidity();
         });
 
         input.addEventListener('input', function() {
-            if (input.value.trim() === '') {
-                input.classList.add('error');
-                errorMessage.style.visibility = 'visible';
-                errorMessage.style.opacity = '1';
-            } else {
-                input.classList.remove('error');
-                errorMessage.style.visibility = 'hidden';
-                errorMessage.style.opacity = '0';
+            if (touchedInputs.has(input)) {
+                validateInput(input, errorMessage);
             }
             checkFormValidity();
         });
@@ -239,6 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         inputs.forEach(input => {
             const errorMessage = input.nextElementSibling;
+            touchedInputs.add(input); // Mark all inputs as touched on form submission
             if (!validateInput(input, errorMessage)) {
                 formIsValid = false;
             }
