@@ -1,0 +1,74 @@
+.links-inner {
+    font-family: Sans-serif;
+    padding-bottom: 45px;
+    border-bottom: 1px solid #cbcbcb;
+  }
+  .links-column {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    text-decoration: none;
+    gap:11px;
+  }
+  .links-column:hover {
+    text-decoration: none;
+  }
+  .link:hover,
+  .link:active {
+    text-decoration: none;
+  }
+  .blue {
+    color: #389bec;
+  }
+  .red {
+    color: #d62339;
+  }
+  .grey {
+    color: #838c95;
+  }
+  .solid {
+    text-decoration: underline solid;
+  }
+  .dashed {
+    text-decoration: underline dashed;
+  }
+  .dotted {
+    text-decoration: underline dotted;
+  }
+  .opasity_solid_blue {
+    text-decoration: underline solid rgb(56, 155, 236, 0.5);
+  }
+  .opasity_dashed_blue {
+    text-decoration: underline dashed rgb(56, 155, 236, 0.5);
+  }
+  .opasity_dotted_blue {
+    text-decoration: underline dotted rgb(56, 155, 236, 0.5);
+  }
+  .opasity_solid_red {
+    text-decoration: underline solid rgb(214, 35, 57, 0.5);
+  }
+  .opasity_dashed_red {
+    text-decoration: underline dashed rgb(214, 35, 57, 0.5);
+  }
+  .opasity_dotted_red {
+    text-decoration: underline dotted rgb(214, 35, 57, 0.5);
+  }
+  .opasity_solid_grey {
+    text-decoration: underline solid rgb(131, 140, 149, 0.5);
+  }
+  .opasity_dashed_grey {
+    text-decoration: underline dashed rgb(131, 140, 149, 0.5);
+  }
+  .opasity_dotted_grey {
+    text-decoration: underline dotted rgb(131, 140, 149, 0.5);
+  }
+  .small {
+    color: #7b8085;
+    font-size: 11px;
+  }
+  .links-inner h3 {
+      padding-top: 18px;
+      font-size: 25px;
+      margin: 0;
+      padding-bottom: 25px;
+  }

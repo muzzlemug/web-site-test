@@ -1,0 +1,217 @@
+.form-info {
+    width: 200px;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .form-inputs {
+    width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+  }
+  .form-input input,
+  .form-input textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+  }
+  
+  .form-input .placeholder {
+    color: black;
+  }
+  .form-input{
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .form-input label{
+    margin-right: 30px;
+    width:170px;
+    display: flex;
+    flex-direction: row-reverse;
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+    padding-top:10px;
+  }
+  .form-input input{
+    width:376px;
+    border-radius: 5px;
+    outline: none;
+  }
+  .form-input input:hover{
+    border:1px solid #999999;
+  }
+  #comment{
+    width:376px;
+    height: 170px;
+    outline: none;
+    resize: none;
+  }
+  .checkbox {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    margin-left: 197px;
+    margin-top: 16px;
+    
+  }
+  
+  .checkbox label {
+    position: relative;
+    padding-left: 30px; /* Отступ для чекбокса */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    
+  }
+  .checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  
+  }
+  
+  .checkbox .checkmark {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 17px; /* Задайте размеры в соответствии с вашими изображениями */
+    height: 23px;
+    background-image: url('/picture/fon.svg');
+    background-size: cover; /* Путь к вашему изображению для обычного состояния */
+    width:24px;
+    height:24px;
+    z-index: 1;
+  }
+  
+  /* При наведении на чекбокс совмещаем фон и бледную галочку */
+  .checkbox label:hover .checkmark {
+    background-image:url('/picture/fon.svg'); /* Путь к вашему изображению для состояния при наведении */
+    background-position: center;
+    background-repeat: no-repeat, no-repeat; /* Отключение повторения изображений */
+    background-size:auto, auto;/* Убедитесь, что оба изображения вписываются в размер чекбокса */
+    opacity: 0.5;
+    z-index: 1;
+  }
+  .checkbox input:checked + .checkmark::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-image: url(/picture/fon2.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+    z-index: -1;
+    
+  }
+  
+  /* Состояние при нажатии */
+  
+  .checkbox input:checked + .checkmark {
+    background-image: url('/picture/fon1.svg'); /* Путь к вашему изображению для состояния при нажатии */
+    background-position:center; /* Изменение позиционирования второго изображения, чтобы оно было выше */
+    background-repeat: no-repeat, no-repeat; /* Отключение повторения изображений */
+    background-size: auto,auto;
+    z-index: 1;
+  }
+  .checkbox label:hover .checkmark::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-image: url(/picture/fon2.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+    z-index: -1;
+  }
+  
+  .btn_and_writer{
+    display:flex;
+    margin-left: 200px;
+    padding-top: 25px;
+    padding-right: 22px;
+  }
+  .text_in_ankets{
+    padding-left: 22px;
+    font-size: 13px;
+    color:#c0bbc1;
+  }
+  .text_in_ankets label {
+    cursor: pointer;
+    position: relative; /* Ensure the pseudo-element is positioned correctly */
+  }
+  
+  .text_in_ankets label span {
+    text-decoration: underline solid #c0bbc1;
+  }
+  
+  .text_in_ankets label::after {
+    content: "";
+  }
+  
+  .text_in_ankets label.comma::after {
+    content: ",";
+    text-decoration: none;
+  }
+  
+  .text_in_ankets label.period::after {
+    content: ".";
+    text-decoration: none;
+  }
+  
+  .text_in_ankets span {
+    white-space: nowrap;
+  }
+  
+  #ankets{
+    font-size: 27px;
+    padding-top: 27px;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  .div_ankets{
+    display:flex;
+  }
+  
+  #required-fields-msg {
+    display: inline; /* По умолчанию элемент отображается */
+  }
+  
+  /* Этот селектор нужен для того, чтобы убедиться, что элементы с классом "-required" корректно скрываются */
+  [id$="-required"] {
+    display: inline; /* По умолчанию элементы отображаются */
+  }
+    .placeholder.error {
+    border-color: red;
+    height:35px;
+    padding-top:0;
+    margin-bottom: -10px;
+  }
+  .placeholder.error:hover{
+    border-color: red;
+    height:35px;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    bottom: -7px; /* Отступ вниз от поля ввода */
+    left: 210px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+  }
+  
+  .input-field.error + .error-message {
+    visibility: visible;
+    opacity: 1;
+  }

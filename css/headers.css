@@ -1,0 +1,21 @@
+.header-inner {
+    border-bottom: 1px solid #cbcbcb;
+    padding-bottom:22px;
+  }
+  .header-inner h3 {
+    font-size: 26px;
+  }
+  .header-inner h1{
+    font-size: 51px;
+  }
+  .header-inner h2{
+    font-size: 25px;
+  }
+  .header-inner h3,
+  .header-inner h1,
+  .header-inner h2,
+  .header-inner h4,
+  .header-inner h5 {
+    margin-top: 0; /* Убираем верхний отступ */
+    margin-bottom: 11px; /* Уменьшаем нижний отступ */
+  }

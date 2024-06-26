@@ -1,0 +1,32 @@
+.text-and-writes-inner p{
+    padding-bottom:5px;
+    margin:0;
+    font-size: 14px;
+  }
+  .text-and-writes-inner {
+    padding-bottom: 54px;
+    border-bottom: 1px solid #cbcbcb;
+  }
+  .text-and-writes-inner h3 {
+    font-size: 26px;
+    margin: 0;
+    padding-top: 24px;
+  }
+  .grey{
+    padding-top: 13px;
+    color: #999999;
+  }
+  .qestion{
+    border: 1px solid red;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    height: 22px;
+    width:22px;
+  }
+  ._div_qes {
+    padding-top: 7px;
+    cursor: pointer;
+  }

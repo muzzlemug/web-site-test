@@ -1,0 +1,52 @@
+.table-inner h3 {
+    margin: 0;
+    font-size: 27px;
+    padding-top: 23px;
+  }
+  .table-inner{
+    border-bottom: 1px solid #cbcbcb;
+    padding-bottom: 60px;
+  }
+  
+  .styled-table {
+    width:562px;
+    border-collapse: collapse;
+    height: 200px; /* Установите высоту таблицы, например, 200 пикселей */
+    overflow-y: auto; /* Добавляем скролл по вертикали, если контент больше, чем высота таблицы */
+  }
+  
+  .styled-table th,
+  .styled-table td {
+    text-align: left;
+    padding-top: 10px;
+  }
+  
+  .styled-table th {
+    font-weight: bold;
+    padding-top: 38px;
+  
+  }
+  
+  .styled-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .styled-table thead tr {
+    border-bottom: 3px double #fadf52;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .styled-table tbody tr {
+    height: 25px; /* Установите высоту строк таблицы, например, 25 пикселей */
+  }
+  .styled-table th:hover ,.styled-table td:hover{
+    cursor: pointer;
+  }
+  .hover_table:hover {
+    background: #fcfafa;
+  }
+  
+  
+  .phone{
+    white-space: nowrap;
+  }

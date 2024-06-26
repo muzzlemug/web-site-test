@@ -1,0 +1,78 @@
+.bloks h3 {
+    font-size: 27px;
+    margin: 0;
+    margin-bottom: 35px;
+    padding-top: 30px;
+}
+.row{
+  flex-direction:row;
+  display:flex;
+  margin-bottom: 20px;
+}
+.block1 {
+  background-color: white;
+  width: 268px;
+  min-height: 218px;
+  box-shadow: 0px 0px 5px  rgba(0, 0, 0, 0.1);
+  display: flex;
+  margin-right: 15px;
+}
+.square{
+  width: 217px;
+  min-height: 209px;
+}
+.block5 {
+  border: 5px solid #fadf52;
+  min-height: 163px; /* Минимальная высота блока */
+  width: 265px; /* Фиксированная ширина блока */
+  box-sizing: border-box; /* Учитываем границы в расчетах размеров */
+  white-space: normal; /* Разрешаем перенос строк */
+}
+
+.header_block {
+  padding: 10px 10px 10px 20px;
+  background: #fadf52;
+  font-size: 13px;
+  height: auto; /* Блок растягивается по высоте */
+  box-sizing: border-box; /* Учитываем отступы в расчетах размеров */
+}
+
+.text_in_header {
+  max-width: 100%; /* Ограничиваем ширину блока в пределах родительского */
+  white-space: normal; /* Разрешаем перенос строк */
+  overflow-wrap: break-word; /* Переносим длинные слова */
+  word-wrap: break-word; /* Переносим длинные слова для совместимости с IE */
+  height: auto; /* Блок растягивается по высоте */
+  display: block; /* Обеспечиваем блочное поведение элемента */
+}
+
+
+
+.border_grey{
+  border: 5px solid #d6e0e2;
+  margin-right: 14px;
+}
+.background_grey{
+  background: #f3f3f3;
+}
+.div_block_text {
+  padding: 20px 30px 55px 22px;
+  font-size: 14px;
+}
+
+.div_block_text5{
+  min-height: 100px;
+  width: 210px;
+  display: flex;
+  border-left: 5px solid #fadf52;
+  border-right: 5px solid #fadf52;
+  border-bottom: 5px solid #fadf52;
+  padding-top: -98px;
+  margin: 0;
+  font-size: 15px;
+  padding: 18px 26px 36px;
+}
+.bloks-inner {
+  padding-bottom: 60px;
+  border-bottom: 1px solid #cbcbcb;
+}
