@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css"> 
+</head>
+<body>
+    <div class="wriper container">
+        <div class="left-wriper">
+            <div class="content-container">
+                <div class="link-navigation">
+                    <p><a href="#headers" class="link_blue_solid">Заголовки</a></p>
+                    <p><a href="#text-and-writes">Текст и подписи</a></p>
+                    <p><a href="#buttons">Кнопки</a></p>
+                    <p><a href="#links">Ссылки</a></p>
+                    <p><a href="#input">Поля ввода</a></p>
+                    <p><a href="#blocks">Блоки</a></p>
+                    <p><a href="#table">Таблицы</a></p>
+                    <p><a href="#ankets">Правильная анкета</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="right-wriper">
+               @@include('./blocks/headers.html')
+               @@include('./blocks/text-and-writes.html') 
+               @@include('./blocks/buttons.html') 
+               @@include('./blocks/links.html') 
+               @@include('./blocks/input.html') 
+               @@include('./blocks/blocks.html') 
+               @@include('./blocks/table.html') 
+               @@include('./blocks/ankets.html') 
+        </div>
+    </div>
+    <script src="/dist/js/index.bundle.js"></script>.
+</body>
+</html>

@@ -1,0 +1,72 @@
+<div class="ankets">
+    <div class="container">
+        <h3 id="ankets">Правильная анкета</h3>
+        <div class="div_ankets">
+            <div class="ankets-inner">
+                <form id="form">
+                    <div class="form-inputs">
+                        <div class="form-input">
+                            <label for="name">Имя</label>
+                            <input type="text" id="name" class="placeholder" placeholder="Имя" required>
+                            <span class="error-message">Пожалуйста, введите имя</span>
+                        </div>
+                        <div class="form-input">
+                            <label for="surname">Фамилия</label>
+                            <input type="text" id="surname" class="placeholder" placeholder="Фамилия" required>
+                            <span class="error-message">Пожалуйста, введите фамилию</span>
+                        </div>
+                        <div class="form-input">
+                            <label for="patronymic">Отчество</label>
+                            <input type="text" id="patronymic" class="placeholder" placeholder="Отчество" required>
+                            <span class="error-message">Пожалуйста, введите отчество</span>
+                        </div>
+                        <div class="form-input">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="placeholder" placeholder="Email" required>
+                            <span class="error-message">Пожалуйста, введите E-mail</span>
+                        </div>
+                        <div class="form-input">
+                            <label for="password">Пароль</label>
+                            <input type="password" id="password" class="placeholder" placeholder="Пароль" required>
+                            <span class="error-message">Пожалуйста, введите пароль</span>
+                        </div>
+                        <div class="form-input">
+                            <label for="confirm-password">Подтвердите пароль</label>
+                            <input type="password" id="confirm-password" class="placeholder" placeholder="Подтвердите пароль" required>
+                            <span class="error-message">Пожалуйста, повторите пароль </span>
+                        </div>
+                        <div class="form-input">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" class="placeholder" placeholder="+_(____)__-__-__" required>
+                            <span class="error-message">Пожалуйста, введите номер телефона</span>
+                        </div>
+                        <div class="form-input comment">
+                            <label for="comment">Комментарий</label>
+                            <textarea id="comment"  placeholder="Комментарий"></textarea>
+                        </div>
+                        <div class="checkbox">
+                            <label for="license-agreement">
+                                <input type="checkbox" id="license-agreement" required>
+                                <span class="checkmark"></span> Пожалуйста, примите лицензионное соглашение
+                            </label>
+                        </div>
+                        <div class="btn_and_writer">
+                            <button type="submit" class="btn big_yellow field-btn" id="submitButton">Отправить</button>
+                            <div class="text_in_ankets">
+                                <span id="required-fields-msg">Не заполнены обязательные поля:</span>
+                                <label for="name" id="name-required"><span>Имя</span></label>
+                                <label for="surname" id="surname-required"><span>Фамилия</span></label>
+                                <label for="patronymic" id="patronymic-required"><span>Отчество</span></label>
+                                <label for="email" id="email-required"><span>E-mail</span></label>
+                                <label for="password" id="password-required"><span>Пароль</span></label>
+                                <label for="confirm-password" id="confirm-password-required"><span>Подтверждение пароля</span></label>
+                                <label for="phone" id="phone-required"><span>Телефон</span></label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

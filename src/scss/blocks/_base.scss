@@ -1,7 +1,15 @@
-body {
-    font-family: 'Open Sans';
-    font-size: 14px;
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
+
+body {
+  font-family: "Open Sans";
+}
+
 p {
     margin: 0;
 }
@@ -16,13 +24,7 @@ p {
     max-width: 951px;
 }
 
-@font-face {
-    font-family: 'Open Sans';
-    src: url('/fonts/OpenSans-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+
 .content-container { /* Отступ слева для контента, чтобы он не перекрывал ссылки */
     padding: 20px; /* Поля для контента */
   }
