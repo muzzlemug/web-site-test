@@ -22,6 +22,7 @@
 });
 */
 //disabled button 
+console.log('Hello,World')
 document.addEventListener('DOMContentLoaded', function() {
     const inputFields = document.querySelectorAll('.form-inputs .form-input input');
     const submitButton = document.getElementById('submitButton');
@@ -249,3 +250,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Проверка валидности формы при загрузке страницы
     checkFormValidity();
 });
+console.log('hello')

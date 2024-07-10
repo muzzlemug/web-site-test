@@ -1,12 +1,10 @@
 const path = require('path');
 
-const config = {
-    mode: 'production',
-    entry: {
-        index: './src/js/index.js',
-    },
+module.exports = {
+    mode: 'development',
+    entry: './src/js/index.js',
     output: {
-        filename: '[name].bundle.js',
+        filename: 'index.bundle.js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: '/'
     },
@@ -33,6 +31,17 @@ const config = {
                     }
                 ],
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'img/[hash].[ext]'
+                        }
+                    }
+                ]
+            }
         ],
     },
     devServer: {
@@ -41,6 +50,4 @@ const config = {
         port: 9000
     },
 };
-
-module.exports = config;
 

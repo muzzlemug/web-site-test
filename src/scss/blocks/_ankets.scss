@@ -79,7 +79,7 @@
     transform: translateY(-50%);
     width: 17px; /* Задайте размеры в соответствии с вашими изображениями */
     height: 23px;
-    background-image: url('/dist/img/fon.svg');
+    background-image: url('/img/fon.svg');
     background-size: cover; /* Путь к вашему изображению для обычного состояния */
     width:24px;
     height:24px;
@@ -88,7 +88,7 @@
   
   /* При наведении на чекбокс совмещаем фон и бледную галочку */
   .checkbox label:hover .checkmark {
-    background-image:url('/dist/img/fon.svg'); /* Путь к вашему изображению для состояния при наведении */
+    background-image:url('/img/fon.svg'); /* Путь к вашему изображению для состояния при наведении */
     background-position: center;
     background-repeat: no-repeat, no-repeat; /* Отключение повторения изображений */
     background-size:auto, auto;/* Убедитесь, что оба изображения вписываются в размер чекбокса */
@@ -102,7 +102,7 @@
     left: 3px;
     width: 24px;
     height: 24px;
-    background-image: url(/dist/img/fon2.svg);
+    background-image: url(/img/fon2.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: contain;
@@ -113,7 +113,7 @@
   /* Состояние при нажатии */
   
   .checkbox input:checked + .checkmark {
-    background-image: url('/dist/img/fon1.svg'); /* Путь к вашему изображению для состояния при нажатии */
+    background-image: url('/img/fon1.svg'); /* Путь к вашему изображению для состояния при нажатии */
     background-position:center; /* Изменение позиционирования второго изображения, чтобы оно было выше */
     background-repeat: no-repeat, no-repeat; /* Отключение повторения изображений */
     background-size: auto,auto;
@@ -126,7 +126,7 @@
     left: 3px;
     width: 24px;
     height: 24px;
-    background-image: url(/dist/img/fon2.svg);
+    background-image: url(/img/fon2.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: contain;
