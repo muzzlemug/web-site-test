@@ -48,10 +48,12 @@ gulp.task('sass', function() {
 
 gulp.task('img', function() {
   return gulp.src('./src/img/**/*').pipe(gulp.dest('./dist/img/')).pipe(browserSync.stream());
+
 });
 
 gulp.task('fonts', function() {
   return gulp.src('./src/fonts/**/*').pipe(gulp.dest('./dist/fonts/')).pipe(browserSync.stream());
+  
 });
 
 const plumberJsConfig = {
