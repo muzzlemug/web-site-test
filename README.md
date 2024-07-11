@@ -1,2 +1,3 @@
-# web-site-test
-# web-site-test
+npm install
+npm install --global gulp-cli
+gulp
